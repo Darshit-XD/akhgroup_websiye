@@ -11,7 +11,7 @@
 .custom-cursor {
   width: 20px;
   height: 20px;
-  border: 2px solid theme('colors.yellow.400');
+  border: 2px solid #991b1b;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -23,7 +23,7 @@
 .custom-cursor-dot {
   width: 4px;
   height: 4px;
-  background: theme('colors.yellow.400');
+  background: #991b1b;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -42,7 +42,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: theme('colors.yellow.400');
+  background-color: #991b1b;
   transition: width 0.3s ease;
 }
 

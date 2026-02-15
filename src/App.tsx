@@ -5,6 +5,7 @@ import Properties from './components/Properties';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import logoImg from "@assets/IMG-20260215-WA0002_1771173199477.jpg";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,19 +34,17 @@ function App() {
   return (
     <div className="min-h-screen bg-black">
       {loading && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black animate-slide-up">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-white animate-slide-up">
           <div className="text-center animate-logo-in">
-            <div className="bg-yellow-400 p-4 rounded-2xl mb-6 inline-block shadow-2xl shadow-yellow-400/20">
-              <svg viewBox="0 0 24 24" className="w-16 h-16 text-black fill-current">
-                <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v13a2 2 0 01-2 2zM7 19h2v-2H7v2zm4 0h2v-2h11v2zm4 0h2v-2h-2v2zm-8-4h2v-2H7v2zm4 0h2v-2h11v2zm4 0h2v-2h-2v2zm-8-4h2v-2H7v2zm4 0h2v-2h11v2zm4 0h2v-2h-2v2z" />
-              </svg>
+            <div className="mb-6 inline-block">
+              <img src={logoImg} alt="AKH GROUP" className="w-32 h-auto" />
             </div>
             <div className="flex items-center justify-center">
-              <span className="text-4xl font-bold text-yellow-400 tracking-wider">AKH</span>
-              <span className="text-4xl font-light text-white ml-2 tracking-widest">GROUP</span>
+              <span className="text-4xl font-serif font-bold text-red-800 tracking-tight">AKH</span>
+              <span className="text-4xl font-serif font-light text-gray-800 ml-2 tracking-widest">GROUP</span>
             </div>
-            <div className="mt-4 h-1 w-48 bg-gray-800 rounded-full mx-auto overflow-hidden">
-              <div className="h-full bg-yellow-400 animate-[loading_2.5s_ease-in-out_forwards]"></div>
+            <div className="mt-4 h-1 w-48 bg-gray-200 rounded-full mx-auto overflow-hidden">
+              <div className="h-full bg-red-800 animate-[loading_2.5s_ease-in-out_forwards]"></div>
             </div>
           </div>
         </div>

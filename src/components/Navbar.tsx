@@ -1,5 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import logoImg from "@assets/IMG-20260215-WA0002_1771173199477.jpg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,17 +12,13 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full bg-black/95 backdrop-blur-sm z-50 border-b border-yellow-500/20">
+    <nav className="fixed w-full bg-black/95 backdrop-blur-sm z-50 border-b border-red-900/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <div className="bg-yellow-400 p-1.5 rounded-lg mr-2 shadow-lg shadow-yellow-400/20">
-              <svg viewBox="0 0 24 24" className="w-6 h-6 text-black fill-current">
-                <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v13a2 2 0 01-2 2zM7 19h2v-2H7v2zm4 0h2v-2h11v2zm4 0h2v-2h-2v2zm-8-4h2v-2H7v2zm4 0h2v-2h11v2zm4 0h2v-2h-2v2zm-8-4h2v-2H7v2zm4 0h2v-2h11v2zm4 0h2v-2h-2v2z" />
-              </svg>
-            </div>
-            <span className="text-2xl font-bold text-yellow-400">AKH</span>
-            <span className="text-2xl font-light text-white ml-1">GROUP</span>
+          <div className="flex items-center gap-3">
+            <img src={logoImg} alt="AKH GROUP" className="h-12 w-auto" />
+            <span className="text-2xl font-serif font-bold text-red-700 tracking-tight">AKH</span>
+            <span className="text-2xl font-serif font-light text-white tracking-widest">GROUP</span>
           </div>
 
           <div className="hidden md:block">

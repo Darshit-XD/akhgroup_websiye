@@ -1,19 +1,16 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import logoImg from "@assets/IMG-20260215-WA0002_1771173199477.jpg";
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-yellow-400/20">
+    <footer className="bg-black border-t border-red-900/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center mb-4">
-              <div className="bg-yellow-400 p-1.5 rounded-lg mr-2">
-                <svg viewBox="0 0 24 24" className="w-5 h-5 text-black fill-current">
-                  <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v13a2 2 0 01-2 2zM7 19h2v-2H7v2zm4 0h2v-2h11v2zm4 0h2v-2h-2v2zm-8-4h2v-2H7v2zm4 0h2v-2h11v2zm4 0h2v-2h-2v2zm-8-4h2v-2H7v2zm4 0h2v-2h11v2zm4 0h2v-2h-2v2z" />
-                </svg>
-              </div>
-              <span className="text-2xl font-bold text-yellow-400">AKH</span>
-              <span className="text-2xl font-light text-white ml-1">GROUP</span>
+            <div className="flex items-center mb-4 gap-3">
+              <img src={logoImg} alt="AKH GROUP" className="h-10 w-auto" />
+              <span className="text-2xl font-serif font-bold text-red-700 tracking-tight">AKH</span>
+              <span className="text-2xl font-serif font-light text-white tracking-widest">GROUP</span>
             </div>
             <p className="text-gray-400 mb-4">
               Building dreams and creating legacies through premium real estate solutions.
