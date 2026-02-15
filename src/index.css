@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black cursor-none;
+  }
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid theme('colors.yellow.400');
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-dot {
+  width: 4px;
+  height: 4px;
+  background: theme('colors.yellow.400');
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.05s ease;
+}
+
+.nav-link-effect {
+  position: relative;
+}
+
+.nav-link-effect::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: theme('colors.yellow.400');
+  transition: width 0.3s ease;
+}
+
+.nav-link-effect:hover::after {
+  width: 100%;
+}
+
+@keyframes logoIn {
+  0% { transform: scale(0.8) opacity: 0; filter: blur(10px); }
+  50% { transform: scale(1.1); opacity: 1; filter: blur(0px); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+@keyframes loading {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-logo-in {
+  animation: logoIn 1.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-in-out forwards 2.5s;
+}

@@ -24,7 +24,7 @@ export default function About() {
                 <span className="text-yellow-400 block mt-2">Creating Legacies</span>
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                AKH Developer has been at the forefront of premium real estate for over 15 years. We specialize in identifying, developing, and delivering exceptional properties that exceed expectations.
+                AKH GROUP has been at the forefront of premium real estate for over 15 years. We specialize in identifying, developing, and delivering exceptional properties that exceed expectations.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
                 Our commitment to quality, integrity, and customer satisfaction has made us a trusted name in the real estate industry. Every property we handle is a testament to our dedication to excellence.

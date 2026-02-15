@@ -25,7 +25,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-              Discover exceptional properties curated by AKH Developer. We turn your real estate dreams into reality with premium locations and unmatched quality.
+              Discover exceptional properties curated by AKH GROUP. We turn your real estate dreams into reality with premium locations and unmatched quality.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
