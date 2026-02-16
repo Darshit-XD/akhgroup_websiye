@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-white">
       {loading && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-white animate-slide-up">
           <div className="text-center animate-logo-in">
@@ -40,11 +40,11 @@ function App() {
               <img src={logoImg} alt="AKH GROUP" className="w-32 h-auto" />
             </div>
             <div className="flex items-center justify-center">
-              <span className="text-4xl font-serif font-bold text-red-800 tracking-tight">AKH</span>
+              <span className="text-4xl font-serif font-bold text-red-700 tracking-tight">AKH</span>
               <span className="text-4xl font-serif font-light text-gray-800 ml-2 tracking-widest">GROUP</span>
             </div>
-            <div className="mt-4 h-1 w-48 bg-gray-200 rounded-full mx-auto overflow-hidden">
-              <div className="h-full bg-red-800 animate-[loading_2.5s_ease-in-out_forwards]"></div>
+            <div className="mt-4 h-1 w-48 bg-gray-100 rounded-full mx-auto overflow-hidden">
+              <div className="h-full bg-red-700 animate-[loading_2.5s_ease-in-out_forwards]"></div>
             </div>
           </div>
         </div>
