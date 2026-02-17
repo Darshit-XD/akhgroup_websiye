@@ -1,4 +1,4 @@
-import { MapPin, Bed, Bath, Square, Heart } from 'lucide-react';
+import { MapPin, Bed, Bath, Square, Heart, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 import PropertyDetails from './PropertyDetails';
 import royalLogo from "@assets/IMG-20260215-WA0013_1771173295946.jpg";
@@ -99,14 +99,16 @@ export default function Properties() {
           {viewMode === 'subProperties' && (
             <button 
               onClick={() => setViewMode('projects')}
-              className="text-red-700 font-medium hover:text-red-800 flex items-center justify-center gap-2 mx-auto mt-2 transition-all"
+              className="group relative bg-red-700 text-white px-8 py-4 rounded-full font-bold shadow-xl shadow-red-700/30 hover:bg-red-800 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 mx-auto mt-6 overflow-hidden"
             >
-              ← Back to All Projects
+              <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
+              <ChevronRight className="rotate-180" size={20} />
+              <span>Back to Project Selection</span>
             </button>
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 ${viewMode === 'subProperties' ? 'animate-in fade-in slide-in-from-bottom-10' : ''}`}>
           {activeProperties.map((property) => (
             <div
               key={property.id}
