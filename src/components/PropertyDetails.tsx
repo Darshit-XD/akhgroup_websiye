@@ -244,31 +244,37 @@ export default function PropertyDetails({ property, onClose }: PropertyDetailsPr
             </div>
 
             {/* Agent Info */}
-            <div className="mt-8 pt-8 border-t border-yellow-400/10 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-900/50 p-6 rounded-2xl border border-yellow-400/10">
-                <h3 className="text-white font-bold text-lg mb-3">Agent Contact</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Phone className="text-yellow-400" size={20} />
-                    <span className="text-gray-300">+1 (555) 123-4567</span>
+            <div className="mt-8 pt-8 border-t border-red-100 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-2xl border border-red-50 shadow-sm hover:shadow-md transition-all duration-300">
+                <h3 className="text-gray-900 font-serif font-bold text-lg mb-4">Agent Contact</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 group">
+                    <div className="bg-red-50 p-2 rounded-full group-hover:bg-red-700 transition-colors">
+                      <Phone className="text-red-700 group-hover:text-white transition-colors" size={18} />
+                    </div>
+                    <span className="text-gray-700 font-medium">+91 98765 43210</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Mail className="text-yellow-400" size={20} />
-                    <span className="text-gray-300">agent@akhdeveloper.com</span>
+                  <div className="flex items-center gap-4 group">
+                    <div className="bg-red-50 p-2 rounded-full group-hover:bg-red-700 transition-colors">
+                      <Mail className="text-red-700 group-hover:text-white transition-colors" size={18} />
+                    </div>
+                    <span className="text-gray-700 font-medium">sales@akhgroup.com</span>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gray-900/50 p-6 rounded-2xl border border-yellow-400/10">
-                <h3 className="text-white font-bold text-lg mb-3">Property Info</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Property ID:</span>
-                    <span className="text-white font-medium">AKH-{String(property.id).padStart(5, '0')}</span>
+              <div className="bg-white p-6 rounded-2xl border border-red-50 shadow-sm hover:shadow-md transition-all duration-300">
+                <h3 className="text-gray-900 font-serif font-bold text-lg mb-4">Property Identity</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center pb-2 border-b border-gray-50">
+                    <span className="text-gray-500 text-sm font-medium">Reference ID</span>
+                    <span className="text-gray-900 font-bold">AKH-{String(property.id).padStart(5, '0')}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Status:</span>
-                    <span className="text-yellow-400 font-medium">Available</span>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-500 text-sm font-medium">Availability</span>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-50 text-green-700 border border-green-100">
+                      Active Listing
+                    </span>
                   </div>
                 </div>
               </div>
